@@ -82,7 +82,7 @@ recommended).  The following packages must be available:
 \end{document}
 ```
 
-See `example.tex` for a complete, compilable example.
+See `infufrgs-example.tex` for a complete, compilable example.
 
 ## Files
 
@@ -91,7 +91,7 @@ infufrgs/
   README.md              — this file
   infufrgs.cls           — the document class (single self-contained file)
   documentation.tex      — user manual (LaTeX source)
-  example.tex            — complete compilable usage example
+  infufrgs-example.tex            — complete compilable usage example
   example.bib            — bibliography database for the example
 ```
 
