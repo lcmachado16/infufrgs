@@ -13,7 +13,7 @@
 % Select program (ppgc, pgmicro, cic, ecp, ppgl) and document type
 % (diss/mestrado, tese/doutorado, tc/dipl, ti, rp, espec, pep, prop-tese,
 %  plano-doutorado).  Add `english' for English-language documents.
-\documentclass[ppgc,diss,english]{infufrgs}
+\documentclass[cic,diss,portuguese]{infufrgs}
 
 % If using pdfLaTeX, declare the input encoding (UTF-8 is recommended).
 % Not needed with XeLaTeX or LuaLaTeX.
@@ -32,19 +32,19 @@
 \translatedtitle{Using \LaTeX\ to Prepare Documents at INF/UFRGS}
 
 % Author: \author{Surname}{First Name(s)}
-\author{Flaumann}{Fritz Gutenberg}
+\author{Machado}{Lucas C.}
 % Multiple authors are supported:
 %\author{Flaumann}{Frida Gutenberg}
 
 % Advisor (title is optional): \advisor[Title]{Surname}{First Name(s)}
-\advisor[Prof.~Dr.]{Lamport}{Leslie}
+\advisor[Prof.~Dr.]{Scheid}{Eder J.}
 % Co-advisor is optional:
 %\coadvisor[Prof.~Dr.]{Knuth}{Donald Ervin}
 
 % Date of the defence.  Defaults to the current month and year if omitted.
 %\date{maio}{2001}
 
-% Location of the defence.  Defaults to Porto Alegre, RS.
+% Location of the defence.  Defaults to Porto Alegre, RS. 
 %\location{Itaquaquecetuba}{SP}
 
 %------------------------------------------------------------------------------
@@ -87,132 +87,131 @@
 % Abstract in the primary language
 %------------------------------------------------------------------------------
 \begin{abstract}
-  Este documento demonstra o uso da classe \textit{infufrgs} para a preparação
-  de monografias, dissertações e teses no Instituto de Informática da UFRGS.
-  A classe fornece formatação automática da folha de rosto, sumário, listas de
-  figuras e tabelas, referências no padrão ABNT e outros elementos
-  pré-textuais e pós-textuais.
+Este Trabalho de Conclusão de Curso tem como objetivo avaliar e comparar ferramentas de recuperação de dados utilizadas em Computação Forense, com foco em técnicas de data carving. O estudo será conduzido por meio de uma metodologia experimental que envolverá a seleção de diferentes ferramentas, a criação de imagens e datasets representando distintos cenários de perda de arquivos, a execução controlada das ferramentas e a análise comparativa dos resultados obtidos. Serão considerados diferentes tipos e condições de arquivos, permitindo avaliar a capacidade das ferramentas em recuperar dados e identificar suas limitações em diferentes cenários. Como contribuição, o trabalho busca estabelecer uma metodologia de avaliação que possa ser reproduzida e utilizada em estudos futuros, além de fornecer uma análise comparativa das ferramentas avaliadas. Os resultados serão discutidos considerando aspectos como taxa de recuperação, tipos de arquivos recuperados e limitações identificadas, contribuindo para a compreensão da aplicabilidade das técnicas de data carving em contextos de Computação Forense.
 \end{abstract}
-
 %------------------------------------------------------------------------------
 % Abstract in the second language (translatedabstract)
 %------------------------------------------------------------------------------
-\begin{translatedabstract}
-  This document demonstrates the use of the \textit{infufrgs} class for
-  preparing monographs, dissertations and theses at the Institute of
-  Informatics of UFRGS.  The class provides automatic formatting of the
-  title page, table of contents, lists of figures and tables, ABNT-style
-  references, and other front- and back-matter elements.
-\end{translatedabstract}
+% \begin{translatedabstract}
+%   This document demonstrates the use of the \textit{infufrgs} class for
+%   preparing monographs, dissertations and theses at the Institute of
+%   Informatics of UFRGS.  The class provides automatic formatting of the
+%   title page, table of contents, lists of figures and tables, ABNT-style
+%   references, and other front- and back-matter elements.
+% \end{translatedabstract}
 
 %------------------------------------------------------------------------------
 % Lists
 %------------------------------------------------------------------------------
+
 \tableofcontents
 
-\listoffigures
+%------------------------------------------------------------------------------
+% <Comentado>
+%------------------------------------------------------------------------------
 
-\listoftables
+% \listoffigures
 
-% Optional: list of abbreviations
-\begin{listofabbrv}{UFRGS}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[INF]  Instituto de Informática
-  \item[PPGC] Programa de Pós-Graduação em Computação
-  \item[UFRGS] Universidade Federal do Rio Grande do Sul
-\end{listofabbrv}
+% \listoftables
+
+% % Optional: list of abbreviations
+% \begin{listofabbrv}{UFRGS}
+%   \item[ABNT] Associação Brasileira de Normas Técnicas
+%   \item[INF]  Instituto de Informática
+%   \item[PPGC] Programa de Pós-Graduação em Computação
+%   \item[UFRGS] Universidade Federal do Rio Grande do Sul
+% \end{listofabbrv}
 
 % Optional: list of symbols
 % \begin{listofsymbols}{$\alpha$}
 %   \item[$\alpha$] Alpha coefficient
 % \end{listofsymbols}
+%------------------------------------------------------------------------------
+% </Comentado>
+%------------------------------------------------------------------------------
+
 
 %==============================================================================
 % Text body
 %==============================================================================
 
+
+% ======================================
+% Introdução
+% ======================================
 \chapter{Introdução}
+ 
+\section{Contextualização}
+% - Crescimento do uso de dispositivos digitais e do volume de dados armazenados
+% - Papel da evidência digital em investigações e processos judiciais
+% - Posicionamento da Computação Forense como área de estudo
+ 
+\section{Problema e Motivação}
+% - Cenários de perda de dados: exclusão, formatação, corrupção, danos ao sistema de arquivos
+% - Recuperação de arquivos quando os metadados não estão mais disponíveis
+% - Diversidade de ferramentas com resultados distintos
+% - Falta de comparações padronizadas e reprodutíveis
+ 
+\section{Justificativa}
+% - Relevância prática para peritos e investigadores
+% - Relevância acadêmica (lacuna metodológica)
+% - Necessidade de critérios objetivos para a escolha de ferramentas
+ 
+\section{Objetivos}
+% - Objetivo geral
+% - Objetivos específicos: seleção das ferramentas, criação de imagens e datasets,
+%   execução controlada, análise comparativa e proposta de metodologia
+ 
+\section{Contribuições Esperadas}
+% - Metodologia de avaliação reproduzível
+% - Análise comparativa das ferramentas
+% - Identificação de limitações por cenário
+ 
+\section{Delimitação do Escopo}
+% - Foco em data carving
+% - Tipos de arquivos e sistemas de arquivos considerados
+% - O que não será abordado (memória, rede, dispositivos móveis, criptografia)
+ 
+\section{Visão Geral da Metodologia}
+% - Resumo da abordagem experimental
+ 
+\section{Organização do Trabalho}
+% - Descrição sucinta dos capítulos seguintes
+ 
 
-Este capítulo introduz o tema do trabalho.  Citações bibliográficas seguem a
-norma ABNT; por exemplo, a linguagem \LaTeX\ foi descrita por
-\cite{lamport1994latex}.
 
-Figuras devem ser referenciadas pelo número (Figura~\ref{fig:exemplo}).
 
-\begin{figure}[htbp]
-  \centering
-  \fbox{\rule{0pt}{4cm}\rule{6cm}{0pt}}
-  \caption{Exemplo de figura com legenda centralizada.}
-  \label{fig:exemplo}
-\end{figure}
 
-\section{Organização do Texto}
 
-O restante deste documento está organizado da seguinte forma.  O
-Capítulo~\ref{cap:fundamentacao} apresenta a fundamentação teórica.
-O Capítulo~\ref{cap:conclusao} apresenta as conclusões.
 
-\chapter{Fundamentação Teórica}
-\label{cap:fundamentacao}
 
-\section{Formatação}
 
-A classe \texttt{infufrgs} herda da classe \texttt{report} do \LaTeX.  As
-margens, o espaçamento entre linhas, a numeração de páginas e os títulos de
-capítulos e seções são configurados automaticamente de acordo com as normas
-do Instituto.
 
-\subsection{Tabelas}
 
-Tabelas devem ter título acima do corpo e ser referenciadas no texto
-(Tabela~\ref{tab:exemplo}).
 
-\begin{table}[htbp]
-  \centering
-  \caption{Exemplo de tabela com legenda centralizada.}
-  \label{tab:exemplo}
-  \begin{tabular}{lcc}
-    \hline
-    \textbf{Coluna A} & \textbf{Coluna B} & \textbf{Coluna C} \\
-    \hline
-    Linha 1 & 1.0 & 2.0 \\
-    Linha 2 & 3.0 & 4.0 \\
-    \hline
-  \end{tabular}
-\end{table}
 
-\subsubsection{Citações longas}
 
-Citações com mais de três linhas devem ser destacadas em bloco, com recuo de
-4\,cm à esquerda:
 
-\begin{quote}
-  Esta é uma citação longa de exemplo.  O ambiente \texttt{quote} da classe
-  \texttt{infufrgs} aplica automaticamente o recuo, o tamanho de fonte e o
-  espaçamento simples exigidos pela norma.
-\end{quote}
 
-\chapter{Conclusão}
-\label{cap:conclusao}
 
-Este documento demonstrou os principais recursos da classe \texttt{infufrgs}.
 
 %==============================================================================
 % Back matter
 %==============================================================================
+% <Comentado>
+% % Appendices start with \appendix (optional \annexname for annexes)
+% \appendix
 
-% Appendices start with \appendix (optional \annexname for annexes)
-\appendix
+% \chapter{Exemplo de Apêndice}
 
-\chapter{Exemplo de Apêndice}
+% Apêndices contêm material elaborado pelo próprio autor.
 
-Apêndices contêm material elaborado pelo próprio autor.
+% \annex
 
-\annex
+% \chapter{Exemplo de Anexo}
 
-\chapter{Exemplo de Anexo}
-
-Anexos contêm material de terceiros reproduzido para documentação.
+% Anexos contêm material de terceiros reproduzido para documentação.
+% </Comentado>
 
 %------------------------------------------------------------------------------
 % References (ABNT author-date style)

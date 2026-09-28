@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{report}
+
+% Pacotes essenciais para textos em português
+\usepackage[utf8]{inputenc} % Codificação do texto
+\usepackage[T1]{fontenc}    % Codificação de fontes
+\usepackage[portuguese]{babel} % Idioma
+\usepackage{graphicx}       % Para inserir imagens
+\usepackage{hyperref}       % Para links clicáveis no sumário
+
+% Add-ons 
+% \usepackage[square]{natbib} % para utilizar o \citeauthor{}
+
+% -----------------------------------------------------------------------------------------------
+\begin{document}
+% -----------------------------------------------------------------------------------------------
+
+\cite{10.1007/978-3-642-19513-6_12}
+
+
+\cite{digitalcorpora}
+
+
+
+\cite{GARFINKEL2009S2} 
+
+
+\cite{alherbawi2016survey}
+
+
+
+
+
+File carving is a forensics technique used to recover files based solely on file structure and content, without relying on matching file system meta-data, and is most often employed to recover files from the unallocated space in a drive.
+
+% ==========================================================
+% Tabela: Mapeamento de artigos
+% ==========================================================
+\begin{table}[h]
+    \caption{Mapeamento de Artigos e Utilidade na Pesquisa}
+    \centering
+    \begin{tabular}{p{5cm}|c|p{7cm}}
+        \hline
+        \textbf{Nome do Artigo / Tópico} & 
+        \textbf{Citação} & 
+        \textbf{Como pretendo usar / Como pode ser útil} \\
+        \hline
+        \hline
+        Título do Artigo sobre Carving & \cite{10.1007/978-3-642-19513-6_12} & Utilizado para descrever os métodos X e Y na revisão da literatura. \\
+        \hline
+        Portal Digital Corpora & \cite{digitalcorpora} & Fonte principal para download das imagens de disco usadas nos testes práticos. \\
+        \hline
+        Bringing science to digital forensics... & \cite{GARFINKEL2009S2} & Base teórica para justificar a escolha de datasets padronizados no experimento. \\
+        \hline
+        A survey on file carving... & \cite{alherbawi2016survey} & Fornece o estado da arte e comparações de ferramentas que embasam o capítulo 2. \\
+        \hline
+    \end{tabular}
+    % \usepackage{abntex2}        % Para o comando \legend
+    % \legend{Fonte: O Autor (2026).}
+    \label{tbl:mapeamento_referencias}
+\end{table}
+
+\newpage
+\begin{table}[h]
+\caption{Mapeamento de Datasets}
+\centering
+    \begin{tabular}{p{5cm}|c|p{7cm}}
+
+    \hline
+    \textbf{Nome do dataset} & 
+    \textbf{Descrição} & 
+    \textbf{link} \\  \hline
+    \hline
+    Dataset de imagens & 
+    % \cite{pan2025pairhumanhighfidelityphotographicdataset} &
+    Dataset de imagens hq & 
+    \cite{pan2025pairhumanhighfidelityphotographicdataset}
+                    
+
+    
+
+\end{tabular}
+\label{tbl:mapeamento_datasets}
+\end{table}
+
+% ---------------------------------------------
+% [Pacote]: Útil para usar o \citeauthor
+% \usepackage[square]{natbib}
+% \citeauthor{}
+
+% ================================================
+\bibliographystyle{abntex2-alf}
+\bibliography{biblio}
+
+\end{document}
