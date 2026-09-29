@@ -16,6 +16,14 @@ PDFS := $(DOC_PDF) $(EXAMPLE_PDF)
 ARCHIVE_CONTENTS := $(wildcard *.tex) $(wildcard *.bib) README.md CHANGELOG COPYING \
 	infufrgs.cls $(PDFS)
 
+## Fix for tar on macOS (BSD tar) vs GNU tar. BSD tar uses -s instead of --transform.
+# TAR_RENAME := $(if $(findstring GNU,$(shell tar --version)),--transform "s,^,$(PACKAGE)/,",-s ",^,$(PACKAGE)/,")
+ifneq ($(findstring GNU,$(shell tar --version)),)
+TAR_RENAME = --transform "s,^,$(PACKAGE)/,"
+else
+TAR_RENAME = -s ",^,$(PACKAGE)/,"
+endif
+
 .PHONY: all pdfs package clean
 
 all: package
@@ -23,7 +31,7 @@ all: package
 pdfs: $(PDFS)
 
 package: pdfs
-	tar -czf "$(ARCHIVE)" --transform "s,^,$(PACKAGE)/," -- $(ARCHIVE_CONTENTS)
+	tar -czf "$(ARCHIVE)" $(TAR_RENAME) -- $(ARCHIVE_CONTENTS)
 
 $(DOC_PDF): $(DOC_SOURCE) infufrgs.cls
 	pdflatex -interaction=nonstopmode -halt-on-error -jobname="$(basename $@)" $(DOC_SOURCE)
