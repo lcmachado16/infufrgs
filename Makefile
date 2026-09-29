@@ -5,13 +5,15 @@ EJECT_DATETIME := $(shell date +%Y%m%d_%H%M%S)
 EJECT_FILE     := tcc_snapshot_$(EJECT_DATETIME).tar.gz
 
 .PHONY: eject
-eject:
+eject: all
 	tar -czf $(EJECT_FILE) \
-		--exclude='snapshot_*.tar.gz' \
+		--exclude='tcc_snapshot_*.tar.gz' \
 		--exclude='.git' \
 		--exclude='$(ARCHIVE)' \
 		.
 	@echo "Snapshot criado: $(EJECT_FILE)"
+clean_eject:
+	rm -f tcc_snapshot_*.tar.gz
 # --- FIM EJECT ------------------------------------------------
 
 PACKAGE := infufrgs
