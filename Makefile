@@ -10,18 +10,13 @@ EXAMPLE_SOURCE := infufrgs-example.tex
 EXAMPLE_PDF := infufrgs-example.pdf
 EXAMPLE_BASENAME := $(basename $(EXAMPLE_PDF))
 EXAMPLE_AUX := infufrgs-example.aux infufrgs-example.bbl infufrgs-example.blg infufrgs-example.lof infufrgs-example.log \
-    infufrgs-example.lot infufrgs-example.out infufrgs-example.toc
-
-BIB_SOURCE := biblio.tex
-BIB_PDF := biblio.pdf
-BIB_BASENAME := $(basename $(BIB_SOURCE))
-BIB_AUX := biblio.aux biblio.bbl biblio.blg biblio.log biblio.out biblio.toc
+	infufrgs-example.lot infufrgs-example.out infufrgs-example.toc
 
 PDFS := $(DOC_PDF) $(EXAMPLE_PDF)
 ARCHIVE_CONTENTS := $(wildcard *.tex) $(wildcard *.bib) README.md CHANGELOG COPYING \
-    infufrgs.cls $(PDFS)
+	infufrgs.cls $(PDFS)
 
-.PHONY: all pdfs package bib clean
+.PHONY: all pdfs package clean
 
 all: package
 
@@ -40,13 +35,6 @@ $(EXAMPLE_PDF): $(EXAMPLE_SOURCE) infufrgs-example.bib infufrgs.cls
 	pdflatex -interaction=nonstopmode -halt-on-error -jobname="$(basename $@)" $(EXAMPLE_SOURCE)
 	pdflatex -interaction=nonstopmode -halt-on-error -jobname="$(basename $@)" $(EXAMPLE_SOURCE)
 
-bib:
-	pdflatex $(BIB_SOURCE)
-	bibtex $(BIB_BASENAME)
-	pdflatex $(BIB_SOURCE)
-	pdflatex $(BIB_SOURCE)
-
 clean:
 	rm -f $(PDFS) $(DOC_AUX) $(EXAMPLE_AUX)
-	rm -f $(BIB_PDF) $(BIB_AUX)
 	rm -f "$(ARCHIVE)"
