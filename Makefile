@@ -38,3 +38,19 @@ $(EXAMPLE_PDF): $(EXAMPLE_SOURCE) infufrgs-example.bib infufrgs.cls
 clean:
 	rm -f $(PDFS) $(DOC_AUX) $(EXAMPLE_AUX)
 	rm -f "$(ARCHIVE)"
+
+# --- TEMPORÁRIO: compilar apenas biblio/ (remover depois) ---
+TMP_BIB_DIR  := biblio
+TMP_BIB_NAME := biblio
+
+.PHONY: tmp-bib
+tmp-bib:
+	cd $(TMP_BIB_DIR) && pdflatex -interaction=nonstopmode -halt-on-error $(TMP_BIB_NAME).tex
+	cd $(TMP_BIB_DIR) && bibtex $(TMP_BIB_NAME)
+	cd $(TMP_BIB_DIR) && pdflatex -interaction=nonstopmode -halt-on-error $(TMP_BIB_NAME).tex
+	cd $(TMP_BIB_DIR) && pdflatex -interaction=nonstopmode -halt-on-error $(TMP_BIB_NAME).tex
+
+.PHONY: tmp-bib-clean
+tmp-bib-clean:
+	cd $(TMP_BIB_DIR) && rm -f *.aux *.bbl *.blg *.log *.out *.toc *.pdf
+# --- FIM DO TEMPORÁRIO ---
