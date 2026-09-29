@@ -1,3 +1,19 @@
+.DEFAULT_GOAL := all 
+
+# --- EJECT: snapshot do diretório -----------------------------
+EJECT_DATETIME := $(shell date +%Y%m%d_%H%M%S)
+EJECT_FILE     := tcc_snapshot_$(EJECT_DATETIME).tar.gz
+
+.PHONY: eject
+eject:
+	tar -czf $(EJECT_FILE) \
+		--exclude='snapshot_*.tar.gz' \
+		--exclude='.git' \
+		--exclude='$(ARCHIVE)' \
+		.
+	@echo "Snapshot criado: $(EJECT_FILE)"
+# --- FIM EJECT ------------------------------------------------
+
 PACKAGE := infufrgs
 VERSION := $(shell sed -n '1{s/^Version[[:space:]]*//;p;q;}' CHANGELOG)
 ARCHIVE := $(PACKAGE).tgz
@@ -47,7 +63,7 @@ clean:
 	rm -f $(PDFS) $(DOC_AUX) $(EXAMPLE_AUX)
 	rm -f "$(ARCHIVE)"
 
-# --- TEMPORÁRIO: compilar apenas biblio/ (remover depois) ---
+# --- TEMPORÁRIO: compilar apenas biblio/ (remover depois) ------------
 TMP_BIB_DIR  := biblio
 TMP_BIB_NAME := biblio
 
@@ -61,4 +77,4 @@ tmp-bib:
 .PHONY: tmp-bib-clean
 tmp-bib-clean:
 	cd $(TMP_BIB_DIR) && rm -f *.aux *.bbl *.blg *.log *.out *.toc *.pdf
-# --- FIM DO TEMPORÁRIO ---
+# --- FIM DO TEMPORÁRIO -----------------------------------------------
