@@ -1,0 +1,17 @@
+
+
+%------------------------------------------------------------------------------
+% Abstract in the primary language
+%------------------------------------------------------------------------------
+\begin{abstract}
+Este Trabalho de Conclusão de Curso tem como objetivo avaliar e comparar ferramentas de recuperação de dados utilizadas em Computação Forense,
+ com foco em técnicas de data carving. O estudo será conduzido por meio de uma metodologia experimental que envolverá a seleção de diferentes ferramentas, 
+ a criação de imagens e datasets representando distintos cenários de perda de arquivos, a execução controlada das ferramentas e 
+ a análise comparativa dos resultados obtidos. Serão considerados diferentes tipos e condições de arquivos, 
+ permitindo avaliar a capacidade das ferramentas em recuperar dados e identificar suas limitações em diferentes cenários. 
+ Como contribuição, o trabalho busca estabelecer uma metodologia de avaliação que possa ser reproduzida e utilizada em estudos futuros
+ , além de fornecer uma análise comparativa das ferramentas avaliadas. Os resultados serão discutidos considerando aspectos como taxa de recuperação, 
+ tipos de arquivos recuperados e limitações identificadas, contribuindo para a compreensão da aplicabilidade das técnicas 
+ de data carving em contextos de Computação Forense.
+\end{abstract}
+

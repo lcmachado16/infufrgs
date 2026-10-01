@@ -1,0 +1,17 @@
+#+TITLE: Teste de citações
+#+AUTHOR: Seu Nome
+#+LANGUAGE: pt-br
+#+BIBLIOGRAPHY: referencias.bib
+#+CITE_EXPORT: biblatex
+#+LATEX_HEADER: \usepackage[brazil]{babel}
+
+* Introdução
+
+Isso foi demonstrado por [cite:@silva2020].
+Vários autores concordam [cite:@silva2020;@souza2019].
+
+* Referências
+
+#+PRINT_BIBLIOGRAPHY:
+
+
