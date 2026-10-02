@@ -49,20 +49,90 @@
 
 ## ===========================================================================
 * TCC
+Capa etc.
+** Resumo - Abstract
+- Objetivo principal: Avaliar e comparar ferramentas de recuperação de dados em Computação Forense, com foco em técnicas de data carving.
+- Metodologia experimental:
+  - Seleção de diferentes ferramentas de recuperação.
+  - Criação de imagens e datasets que representem distintos cenários de perda de ficheiros.
+  - Execução controlada das ferramentas escolhidas.
+  - Análise comparativa dos resultados obtidos.
+- Variáveis de análise: Diferentes tipos e condições de ficheiros para medir a capacidade de recuperação e identificar limitações em cenários variados.
+- Contribuições do trabalho:
+  - Estabelecimento de uma metodologia de avaliação reprodutível para estudos futuros.
+  - Fornecimento de uma análise comparativa das ferramentas testadas.
+- Discussão dos resultados: Avaliação pautada em métricas como:
+  - Taxa de recuperação.
+  - Tipos de ficheiros efetivamente recuperados.
+  - Limitações identificadas nas técnicas de data carving.
+
 
 ** Introdução
 
 *** Contextualização 
 A computação forense é muito importante. Dentro dela existe o data carving 
 
+*** Contextualização
+- Crescimento do uso de dispositivos e sistemas digitais
+  - Computadores, smartphones, servidores e dispositivos de armazenamento
+  - Aumento do volume de dados produzidos e armazenados
+  - Diversidade de informações presentes nesses dispositivos
+
+- Dados digitais como fonte de informação
+  - Documentos
+  - Imagens
+  - Comunicações
+  - Registros de atividades
+  - Metadados
+  - Arquivos de configuração
+
+- Evidência digital
+  - Conceito de evidência digital
+  - Utilização em investigações
+  - Utilização em processos judiciais
+  - Importância para reconstrução de eventos
+  - Necessidade de preservação e integridade
+  - Rastreabilidade dos dados
+
+- Computação Forense
+  - Contextualização da área
+  - Identificação de evidências
+  - Aquisição
+  - Preservação
+  - Recuperação
+  - Análise
+  - Uso de métodos e ferramentas especializadas
+
+- Problema da disponibilidade dos dados
+  - Arquivos podem deixar de estar acessíveis pelos mecanismos convencionais
+  - Exclusão de arquivos
+  - Dados remanescentes nos meios de armazenamento
+  - Limitações da recuperação baseada no sistema de arquivos
+
+- Recuperação de dados
+  - Necessidade de recuperar informações não acessíveis convencionalmente
+  - Diferentes técnicas de recuperação
+  - Relação com a Computação Forense
+
+- Introdução ao data carving
+  - Recuperação baseada no conteúdo dos arquivos
+  - Independência ou menor dependência das estruturas do sistema de arquivos
+  - Aplicabilidade em cenários de perda ou remoção de arquivos
+  - Transição para o problema estudado neste trabalho
+    
 *** Problema e motivação
+- Recuperação de dados
+
 
 
 ** Fundamentação Teórica
 
-*** 
+*** Sistemas de arquivos 
 
 
 
 
-* TODO Problema e Motivação
+
+* Progresso 
+* TODO Problema e Motivação [/]
+- [] 
