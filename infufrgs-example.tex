@@ -140,6 +140,7 @@ Este Trabalho de Conclusão de Curso tem como objetivo avaliar e comparar ferram
 % Introdução
 % ======================================
 \chapter{Introdução}
+A Computação Forense é muito importante 
  
 \section{Contextualização}
 % - Crescimento do uso de dispositivos digitais e do volume de dados armazenados
@@ -194,11 +195,132 @@ Objetivos específicos:
 % ======================================
 % Fundamentação Teórica
 % ======================================
+
 \chapter{Fundamentação Teórica}
+\label{cap:fundamentacao}
 
+\section{Computação Forense}
 
+\subsection{Evidência Digital}
+% - Definição
+% - Características
+% - Integridade e autenticidade
+% - Papel na investigação digital
 
+\subsection{Processo de Investigação Digital}
+% - Identificação
+% - Aquisição
+% - Exame
+% - Análise
+% - Apresentação
+% - Introduzir a recuperação de dados como parte do processo
 
+\section{Armazenamento e Organização de Arquivos}
+
+\subsection{Sistemas de Arquivos}
+% - Função de um sistema de arquivos
+% - Organização dos arquivos e metadados
+% - Estruturas utilizadas para localizar os dados
+
+\subsection{Alocação e Armazenamento de Arquivos}
+% - Blocos/clusters
+% - Metadados
+% - Localização dos dados
+% - Relação entre metadados e conteúdo do arquivo
+
+\subsection{Sistemas de Arquivos Considerados}
+% - Apresentar somente os sistemas relevantes aos experimentos
+% - FAT32/exFAT
+% - NTFS
+% - Ext4
+% - Destacar diferenças relevantes para recuperação
+
+\section{Exclusão e Recuperação de Dados}
+
+\subsection{Exclusão de Arquivos}
+% - Exclusão lógica
+% - O que ocorre com metadados
+% - O que ocorre com os dados armazenados
+% - Reutilização dos espaços anteriormente ocupados
+
+\subsection{Formatação e Perda de Dados}
+% - Formatação rápida
+% - Formatação e alteração das estruturas do sistema de arquivos
+% - Diferença entre perda de referências e sobrescrita dos dados
+
+\subsection{Métodos de Recuperação}
+% - Recuperação baseada em metadados
+% - Recuperação baseada no conteúdo
+% - Diferenças entre as abordagens
+% - Cenários em que cada abordagem pode ser utilizada
+
+\section{File Carving}
+
+\subsection{Fundamentos do File Carving}
+% - Conceito
+% - Recuperação sem depender diretamente das estruturas do sistema de arquivos
+% - Identificação de arquivos pelo conteúdo
+
+\subsection{Assinaturas de Arquivos}
+% - Headers
+% - Footers
+% - Estruturas internas
+% - Tipos de arquivo e assinaturas
+
+\subsection{Reconstrução de Arquivos}
+% - Identificação dos limites
+% - Extração dos dados
+% - Reconstrução do arquivo
+
+\subsection{Fragmentação de Arquivos}
+% - Arquivos fragmentados
+% - Problema da perda da continuidade dos dados
+% - Impacto sobre o carving
+% - Técnicas para lidar com fragmentação
+
+\subsection{Limitações do File Carving}
+% - Ausência de metadados
+% - Nomes de arquivos
+% - Estrutura de diretórios
+% - Fragmentação
+% - Falsos positivos
+% - Arquivos parcialmente sobrescritos
+
+\section{Ferramentas de Recuperação de Dados}
+
+\subsection{Ferramentas de File Carving}
+% - Foremost
+% - Scalpel
+% - PhotoRec
+% - Outras ferramentas selecionadas
+% - Princípios de funcionamento
+
+\subsection{Características das Ferramentas}
+% - Sistemas suportados
+% - Tipos de arquivos
+% - Estratégia de recuperação
+% - Configuração
+% - Forma de operação
+
+\section{Avaliação de Ferramentas de Recuperação}
+
+\subsection{Métricas de Recuperação}
+% - Quantidade de arquivos corretamente recuperados
+% - Taxa de recuperação
+% - Recuperação por tipo de arquivo
+
+\subsection{Integridade dos Arquivos Recuperados}
+% - Validação dos arquivos
+% - Hash
+% - Comparação com arquivos originais
+
+\subsection{Desempenho}
+% - Tempo de execução
+% - Consumo de recursos, se aplicável
+
+\subsection{Limitações e Critérios de Comparação}
+% - O que caracteriza uma recuperação bem-sucedida
+% - Critérios utilizados para comparar as ferramentas
 
 
 

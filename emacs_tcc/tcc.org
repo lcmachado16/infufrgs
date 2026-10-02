@@ -72,7 +72,7 @@
 ** Capítulo 1 - Introdução
 
 *** Contextualização 
-A computação forense é muito importante. Dentro dela existe o data carving 
+A computação forense é muito importante.
 
     
 *** Problema e motivação
