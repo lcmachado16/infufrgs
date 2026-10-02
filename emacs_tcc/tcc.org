@@ -1,0 +1,68 @@
+*TCC
+
+**Introdução
+
+
+
+% ======================================
+% Introdução
+% ======================================
+\chapter{Introdução}
+ 
+\section{Contextualização}
+% - Crescimento do uso de dispositivos digitais e do volume de dados armazenados
+% - Papel da evidência digital em investigações e processos judiciais
+% - Posicionamento da Computação Forense como área de estudo
+ 
+\section{Problema e Motivação}
+% - Cenários de perda de dados: exclusão, formatação, corrupção, danos ao sistema de arquivos
+% - Recuperação de arquivos quando os metadados não estão mais disponíveis
+% - Diversidade de ferramentas com resultados distintos
+% - Falta de comparações padronizadas e reprodutíveis
+ 
+\section{Justificativa}
+% - Relevância prática para peritos e investigadores
+% - Relevância acadêmica (lacuna metodológica)
+% - Necessidade de critérios objetivos para a escolha de ferramentas
+ 
+\section{Objetivos}
+% - Objetivo geral
+% - Objetivos específicos: seleção das ferramentas, criação de imagens e datasets,
+%   execução controlada, análise comparativa e proposta de metodologia
+ 
+\section{Contribuições Esperadas}
+% - Metodologia de avaliação reproduzível
+% - Análise comparativa das ferramentas
+% - Identificação de limitações por cenário
+ 
+\section{Delimitação do Escopo}
+% - Foco em data carving
+% - Tipos de arquivos e sistemas de arquivos considerados
+% - O que não será abordado (memória, rede, dispositivos móveis, criptografia)
+ 
+\section{Visão Geral da Metodologia}
+% - Resumo da abordagem experimental
+ 
+\section{Organização do Trabalho}
+% - Descrição sucinta dos capítulos seguintes
+
+
+## ===========================================================================
+* TCC
+
+** Introdução
+
+*** Contextualização 
+A computação forense é muito importante. Dentro dela existe o data carving 
+
+*** Problema e motivação
+
+
+** Fundamentação Teórica
+
+*** 
+
+
+
+
+* TODO Problema e Motivação
