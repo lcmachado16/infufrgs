@@ -1,0 +1,4 @@
+
+
+- Dividir analises por arquivo 
+
